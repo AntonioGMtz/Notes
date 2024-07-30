@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Notas</string>
     <string name="logo_desc">Imagen del login\n</string>
+    <string name="add_item">Nuevo Item</string>
 </resources>

@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.kotlinKapt)
 }
 
 android {
@@ -26,8 +27,9 @@ android {
             )
         }
     }
-    viewBinding{
-        enable = true
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
     }
 
     compileOptions {
