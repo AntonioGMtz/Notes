@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    tools:context=".MainActivity">
+    <!-- Logo redondo -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:contentDescription="@string/logo_desc" />
+
+    <!-- Espacio entre logo y los campos de entrada -->
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+
+    <!-- Campo de usuario -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Usuario"
+        app:boxStrokeColor="@color/design_default_color_primary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Espacio entre los campos de entrada -->
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="12dp" />
+
+    <!-- Campo de contraseña -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        app:boxStrokeColor="@color/design_default_color_primary"
+        app:endIconMode="password_toggle"
+        app:endIconDrawable="@drawable/eye"> <!-- Ícono de ojo -->
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Espacio entre el campo de contraseña y el botón de login -->
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+
+    <!-- Botón de login -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Iniciar sesión"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:textColor="@android:color/white"
+        android:padding="12dp"/>
+
+    <!-- Espacio entre el botón de login y la leyenda -->
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+
+    <!-- Leyenda de registro -->
+    <TextView
+        android:id="@+id/registerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="¿No tienes cuenta? Regístrate"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textStyle="bold" />
+</LinearLayout>
