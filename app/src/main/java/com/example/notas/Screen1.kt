@@ -36,10 +36,13 @@ class Screen1 : AppCompatActivity() {
 
         // Configura el FloatingActionButton
         binding.fabAddItem.setOnClickListener {
-            // Lógica para agregar un nuevo elemento
-            // Puedes mostrar un diálogo o ir a otra actividad para agregar datos
-            Toast.makeText(this, "Agregar nuevo ítem", Toast.LENGTH_SHORT).show()
+            // Mostrar WelcomeFragment
+            showWelcomeFragment()
         }
 
+    }
+    private fun showWelcomeFragment() {
+        val screen1Fragment = Screen1Fragment()
+        screen1Fragment.show(supportFragmentManager, "WelcomeFragment")
     }
 }
